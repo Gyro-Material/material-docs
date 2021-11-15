@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="background-primary page-title" style="display: flex;align-items: center;">
-
 	<h1 class="h4 text-white">{{ page.title }}</h1>
 	<a class="btn text text-white dark small" style="height: max-content; margin-left: 0.5em;" href={{ page.edit_url }} data-tooltip="Edit this page on Github">Edit this page</a>
 
@@ -9,14 +8,14 @@
 </div>
 <article class="row sides p-0 container-fluid" id="main-content">
 	<aside class="col-3 p-0">
-		<div class="list">
+		<div class="list small">
 			{% if nav|length>1 %}
 			{% for nav_item in nav %} {% if nav_item.children %}
 			<p><strong>{{ nav_item.title }}</strong></p>
 			{% for nav_item in nav_item.children %}
 			<a
 			class="
-			list-item ripple-e
+			list-item
 			{%
 			if
 			nav_item.active%}active{%
@@ -29,7 +28,7 @@
 		</a>
 		{% endfor %}
 		{% else %}
-		<a class="list-item ripple-e {% if nav_item.active%}active{% endif %}" href="{{ nav_item.url|url }}">
+		<a class="list-item {% if nav_item.active%}active{% endif %}" href="{{ nav_item.url|url }}">
 			{{ nav_item.title }}
 		</a>
 		{% endif %} {% endfor %}
@@ -37,6 +36,17 @@
 	</div>
 </aside>
 <main class="col-3 p-3">
+	<div id="offers-content">
+		<ins class="adsbygoogle"
+		style="display:block"
+		data-ad-format="fluid"
+		data-ad-layout-key="-gs-3+1f-3d+2z"
+		data-ad-client="ca-pub-8836219589547174"
+		data-ad-slot="6464200648"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
 	<div class="row">
 		<div class="col" id="table-of-contents">
 			{% set toc_num = namespace(value=0) %}

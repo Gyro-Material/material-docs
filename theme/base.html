@@ -79,11 +79,7 @@
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/tronic247/material/dist/js/material.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/dieulot/instantclick@master/src/instantclick.js" data-no-instant></script>
-        <script data-no-instant>
-            InstantClick.init("mousedown");
-        </script>
+        <script src="https://cdn.jsdelivr.net/gh/tronic247/material/dist/js/material.min.js"></script>      
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
         <script>
@@ -133,8 +129,8 @@
                     : fallbackCopyTextToClipboard(o);
             }
             $("pre")
-                .attr("data-tooltip", "Click to Copy")
-                .click(function (event) {
+                .attr("data-tooltip", "Double Click to Copy")
+                .dblclick(function (event) {
                     var t = this;
                     copyTextToClipboard($(t).text());
                     Material.Snackbar({ message: "Copied to clipboard" });
